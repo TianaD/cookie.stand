@@ -37,11 +37,13 @@ const seattle = {
             this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
         }
         return this.cookiesPerHour;
-    },
+    }
 
-    seattle.getcookies();
+
     
 }
+
+    seattle.getcookies();
 
 //object definition for a location
         //======================================================================Starting Data=========================================================
@@ -50,9 +52,9 @@ const seattle = {
         Seattle	    23	        65	        6.3
         */
 const Tokyo = {
-    min: 23,
-    max: 65,
-    avg: 6.3,
+    min: 3,
+    max: 24,
+    avg: 1.2,
     location: 'Tokyo',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
         //======================================================================Customers Per Hour=========================================================
@@ -75,11 +77,13 @@ const Tokyo = {
             this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
         }
         return this.cookiesPerHour;
-    },
+    }
 
-    Tokyo.getcookies();
+
     
 }
+
+    Tokyo.getcookies();
 
 //object definition for a location
         //======================================================================Starting Data=========================================================
@@ -88,9 +92,9 @@ const Tokyo = {
         Seattle	    23	        65	        6.3
         */
 const dubai = {
-    min: 23,
-    max: 65,
-    avg: 6.3,
+    min: 11,
+    max: 38,
+    avg: 3.7,
     location: 'Dubai',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
         //======================================================================Customers Per Hour=========================================================
@@ -113,11 +117,13 @@ const dubai = {
             this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
         }
         return this.cookiesPerHour;
-    },
+    }
 
-    dubai.getcookies();
+
     
 }
+
+    dubai.getcookies();
 
 //object definition for a location
         //======================================================================Starting Data=========================================================
@@ -126,9 +132,9 @@ const dubai = {
         Seattle	    23	        65	        6.3
         */
 const paris = {
-    min: 23,
-    max: 65,
-    avg: 6.3,
+    min: 20,
+    max: 38,
+    avg: 2.3,
     location: 'Paris',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
         //======================================================================Customers Per Hour=========================================================
@@ -151,11 +157,13 @@ const paris = {
             this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
         }
         return this.cookiesPerHour;
-    },
+    }
 
-    paris.getcookies();
+
     
 }
+
+    paris.getcookies();
 
 
 //object definition for a location
@@ -165,9 +173,9 @@ const paris = {
         Seattle	    23	        65	        6.3
         */
 const lima = {
-    min: 23,
-    max: 65,
-    avg: 6.3,
+    min: 2,
+    max: 16,
+    avg: 4.6,
     location: 'Lima',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
         //======================================================================Customers Per Hour=========================================================
@@ -190,11 +198,13 @@ const lima = {
             this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
         }
         return this.cookiesPerHour;
-    },
+    }
 
-    lima.getcookies();
+
     
 }
+
+    lima.getcookies();
 
 
 
