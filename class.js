@@ -43,7 +43,7 @@ const seattle = {
     
 }
 
-    seattle.getcookies();
+    seattle.getCookies();
 
 //object definition for a location
         //======================================================================Starting Data=========================================================
@@ -83,7 +83,7 @@ const Tokyo = {
     
 }
 
-    Tokyo.getcookies();
+    Tokyo.getCookies();
 
 //object definition for a location
         //======================================================================Starting Data=========================================================
@@ -123,7 +123,7 @@ const dubai = {
     
 }
 
-    dubai.getcookies();
+    dubai.getCookies();
 
 //object definition for a location
         //======================================================================Starting Data=========================================================
@@ -163,7 +163,7 @@ const paris = {
     
 }
 
-    paris.getcookies();
+    paris.getCookies();
 
 
 //object definition for a location
@@ -204,7 +204,7 @@ const lima = {
     
 }
 
-    lima.getcookies();
+    lima.getCookies();
 
 
 
@@ -219,13 +219,14 @@ const lima = {
 */
     let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
     let cookieDemo = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-    let hoursArray = document.querySelector('.output')
+    let hoursArray = document.querySelector('.output');
     for(let i = 0; i < hoursDemo.length; i++) {
         //hoursDemo[i].innerHTML
         let variable = document.createElement("li");
         variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
         hoursArray.append(variable);
     }
+
 
     /*
     Seattle
