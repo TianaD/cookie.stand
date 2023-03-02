@@ -5,17 +5,30 @@ function getRandom(max, min) {
     // 0 >= random #  <= 1  * limit
 }
 
+//object definition for a location
+        //======================================================================Starting Data=========================================================
+        /*
+        Location	Min/Cust	Max/Cust	AvgCookie/Sale
+        Seattle	    23	        65	        6.3
+        */
 const seattle = {
     min: 23,
     max: 65,
     avg: 6.3,
     location: 'Seattle',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        //======================================================================Customers Per Hour=========================================================
+        /*2. Use a method of that object to generate a 
+        random number of customers per hour. */
     customersPerHour: function() {
         // console.log(this.max);
         // console.log(this.min);
         return getRandom(this.max, this.min);
     },
+        //======================================================================Cookies Per Hour=========================================================
+        /* 3. Calculate and store the simulated amounts of cookies 
+        purchased for each hour at each location using average 
+        cookies purchased and the random number of customers generated.*/
     cookiesPerHour: [],
     getCookies: function() {
         for(let i = 0; i < this.hoursOfOperation.length; i++) {
@@ -29,17 +42,31 @@ const seattle = {
     seattle.getcookies();
     
 }
+
+//object definition for a location
+        //======================================================================Starting Data=========================================================
+        /*
+        Location	Min/Cust	Max/Cust	AvgCookie/Sale
+        Seattle	    23	        65	        6.3
+        */
 const Tokyo = {
     min: 23,
     max: 65,
     avg: 6.3,
     location: 'Tokyo',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        //======================================================================Customers Per Hour=========================================================
+        /*2. Use a method of that object to generate a 
+        random number of customers per hour. */
     customersPerHour: function() {
         // console.log(this.max);
         // console.log(this.min);
         return getRandom(this.max, this.min);
     },
+        //======================================================================Cookies Per Hour=========================================================
+        /* 3. Calculate and store the simulated amounts of cookies 
+        purchased for each hour at each location using average 
+        cookies purchased and the random number of customers generated.*/
     cookiesPerHour: [],
     getCookies: function() {
         for(let i = 0; i < this.hoursOfOperation.length; i++) {
@@ -53,17 +80,31 @@ const Tokyo = {
     Tokyo.getcookies();
     
 }
+
+//object definition for a location
+        //======================================================================Starting Data=========================================================
+        /*
+        Location	Min/Cust	Max/Cust	AvgCookie/Sale
+        Seattle	    23	        65	        6.3
+        */
 const dubai = {
     min: 23,
     max: 65,
     avg: 6.3,
     location: 'Dubai',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        //======================================================================Customers Per Hour=========================================================
+        /*2. Use a method of that object to generate a 
+        random number of customers per hour. */
     customersPerHour: function() {
         // console.log(this.max);
         // console.log(this.min);
         return getRandom(this.max, this.min);
     },
+        //======================================================================Cookies Per Hour=========================================================
+        /* 3. Calculate and store the simulated amounts of cookies 
+        purchased for each hour at each location using average 
+        cookies purchased and the random number of customers generated.*/
     cookiesPerHour: [],
     getCookies: function() {
         for(let i = 0; i < this.hoursOfOperation.length; i++) {
@@ -77,17 +118,31 @@ const dubai = {
     dubai.getcookies();
     
 }
+
+//object definition for a location
+        //======================================================================Starting Data=========================================================
+        /*
+        Location	Min/Cust	Max/Cust	AvgCookie/Sale
+        Seattle	    23	        65	        6.3
+        */
 const paris = {
     min: 23,
     max: 65,
     avg: 6.3,
     location: 'Paris',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        //======================================================================Customers Per Hour=========================================================
+        /*2. Use a method of that object to generate a 
+        random number of customers per hour. */
     customersPerHour: function() {
         // console.log(this.max);
         // console.log(this.min);
         return getRandom(this.max, this.min);
     },
+        //======================================================================Cookies Per Hour=========================================================
+        /* 3. Calculate and store the simulated amounts of cookies 
+        purchased for each hour at each location using average 
+        cookies purchased and the random number of customers generated.*/
     cookiesPerHour: [],
     getCookies: function() {
         for(let i = 0; i < this.hoursOfOperation.length; i++) {
@@ -101,17 +156,32 @@ const paris = {
     paris.getcookies();
     
 }
+
+
+//object definition for a location
+        //======================================================================Starting Data=========================================================
+        /*
+        Location	Min/Cust	Max/Cust	AvgCookie/Sale
+        Seattle	    23	        65	        6.3
+        */
 const lima = {
     min: 23,
     max: 65,
     avg: 6.3,
     location: 'Lima',
     hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        //======================================================================Customers Per Hour=========================================================
+        /*2. Use a method of that object to generate a 
+        random number of customers per hour. */
     customersPerHour: function() {
         // console.log(this.max);
         // console.log(this.min);
         return getRandom(this.max, this.min);
     },
+        //======================================================================Cookies Per Hour=========================================================
+        /* 3. Calculate and store the simulated amounts of cookies 
+        purchased for each hour at each location using average 
+        cookies purchased and the random number of customers generated.*/
     cookiesPerHour: [],
     getCookies: function() {
         for(let i = 0; i < this.hoursOfOperation.length; i++) {
@@ -125,21 +195,8 @@ const lima = {
     lima.getcookies();
     
 }
-//object definition for a location
-    //---starting data
-        /*
-        Location	Min/Cust	Max/Cust	AvgCookie/Sale
-        Seattle	    23	        65	        6.3
-        */
-       
-    //----customers per hour
-        /*2. Use a method of that object to generate a 
-        random number of customers per hour. */
 
-    //---cookies per hour
-        /* 3. Calculate and store the simulated amounts of cookies 
-        purchased for each hour at each location using average 
-        cookies purchased and the random number of customers generated.*/
+
 
     //customers per hour
         /* 4. Store the results for each location in a separate array… 
@@ -159,6 +216,7 @@ const lima = {
         variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
         hoursArray.append(variable);
     }
+
     /*
     Seattle
     6am: 16 cookies
