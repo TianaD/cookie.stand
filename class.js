@@ -226,7 +226,25 @@ const lima = {
         variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.cookiesPerHour[i]} cookies`;
         hoursArray.append(variable);
     }
+    function cookieStandLocation(min, max, avg, location) {
+        // let tblDemo = document.createElement('table');
+        let stand = {};
+        stand.min = min;
+        stand.max = max;
+        stand.avg = avg;
+        stand.location = location;
+        stand.cookiesPerHour = [];
+        stand.hoursOfOperation = [];
+        stand.getCookies = function() {
+            return getCookies();
+        };
+        stand.getCustomers = function() 
+            return getRandom(this.max, this.min);
 
+
+    }
+
+    const seattle = cookieStandLocation(23, 65, 6.3)
 
     /*
     Seattle
