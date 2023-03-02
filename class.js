@@ -223,7 +223,7 @@ const lima = {
     for(let i = 0; i < hoursDemo.length; i++) {
         //hoursDemo[i].innerHTML
         let variable = document.createElement("li");
-        variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
+        variable.innerHTML = `${seattle.hoursOfOperation[i]}: ${seattle.cookiesPerHour[i]} cookies`;
         hoursArray.append(variable);
     }
 
