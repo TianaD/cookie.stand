@@ -60,7 +60,7 @@ let seattleCookiesPerHour = seattle.cookieSales()
 for (let i =0; i < hoursOfOperation.length; i++){
     let chickFilA = document.createElement("li")
     chickFilA.innerHTML = `${hoursOfOperation[i]}: ${seattleCookiesPerHour[i]}`
-    displaySeattle.append(chickFilA);
+    displaySeattle.append(chickFilA); //a method in javascript is a function attached to an object that performs a needed task
 }
 
 
