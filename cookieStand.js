@@ -38,7 +38,7 @@ let seattle = {
         let cookiesPerHour = [];
         let customersAtEachHour = this.randomCustPerHr()
         for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg
+            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
             cookiesPerHour.push (cookiesSold)
         }
         return cookiesPerHour
@@ -88,7 +88,7 @@ let tokyo = {
         let cookiesPerHour = [];
         let customersAtEachHour = this.randomCustPerHr()
         for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg
+            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
             cookiesPerHour.push (cookiesSold)
         }
         return cookiesPerHour
@@ -128,7 +128,7 @@ let dubai = {
         let cookiesPerHour = [];
         let customersAtEachHour = this.randomCustPerHr()
         for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg
+            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
             cookiesPerHour.push (cookiesSold)
         }
         return cookiesPerHour
@@ -167,7 +167,7 @@ let paris = {
         let cookiesPerHour = [];
         let customersAtEachHour = this.randomCustPerHr()
         for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg
+            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
             cookiesPerHour.push (cookiesSold)
         }
         return cookiesPerHour
@@ -208,7 +208,7 @@ let lima = {
         let cookiesPerHour = [];
         let customersAtEachHour = this.randomCustPerHr()
         for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg
+            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
             cookiesPerHour.push (cookiesSold)
         }
         return cookiesPerHour
