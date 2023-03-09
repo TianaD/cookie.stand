@@ -13,6 +13,7 @@ let object = {
     name: "Tiana"
 
 }
+
 let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"]
 let seattle = {
     min: 23,
@@ -21,7 +22,7 @@ let seattle = {
 
 
 
-    // a method is a function attached to an object
+    // a method is a function attached to an object (i.e. push, random, floor, ceil, log, append, createElement, getElementByID)
     randomCustPerHr: function () {
         let custPerHour = [];
         for (let i = 0; i < hoursOfOperation.length; i++) {
@@ -65,7 +66,7 @@ let seattleCookiesPerHour = seattle.cookieSales();
 displaySeattleHeading.append(headings[0]);
 for (let i =0; i < hoursOfOperation.length; i++){
     let chickFilA = document.createElement("li");
-    chickFilA.innerHTML = `${hoursOfOperation[i]}: ${seattleCookiesPerHour[i]}`;
+    chickFilA.innerHTML = `${hoursOfOperation[i]}: ${seattleCookiesPerHour[i]}`; //.innerHTML is a property
     displaySeattle.append(chickFilA); //a method in javascript is a function attached to an object that performs a needed task
 }
 
