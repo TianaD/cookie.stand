@@ -409,8 +409,3 @@ Total: 875 cookies
     // 7pm: 57 cookies
     // Total: 875 cookies
 
-
-
-
-
-    
