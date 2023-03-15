@@ -356,7 +356,7 @@ function cookieStandLocation(minNumberofCustomers, maxNumberofCustomers, avgNumb
         } //use "this" when referring to stand inside of the method and stand when not inside of a stand method 
             for (let i = 0; i < this.cookiesPerHour.length; i++) {
                 sum += this.cookiesPerHour[i];
-                
+                //here I can insert a line of code to calculate the total of the totals
             }
             
             
