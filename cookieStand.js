@@ -1,10 +1,10 @@
 'use strict'
-//random function between max and min input
+//random function between maxNumberofCustomers and minNumberofCustomers input
 // let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"
 let headings = ["Seattle", "Tokyo", "Dubai", "Paris", "Lima"];
-// console.log(headings[3]); //this will display "Paris"
-function getRandom(max, min) {
-    return Math.ceil(Math.random() * (max - min) + min);
+// ////console.log(headings[3]); //this will display "Paris"
+function getRandom(maxNumberofCustomers, minNumberofCustomers) {
+    return Math.ceil(Math.random() * (maxNumberofCustomers - minNumberofCustomers) + minNumberofCustomers);
     // 0 >= random #  <= 1  * limit
 }
 //declare empty object
@@ -14,229 +14,229 @@ let object = {
 
 }
 
-let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"]
-let seattle = {
-    min: 23,
-    max: 65,
-    avg: 6.3,
+// let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"]
+// let seattle = {
+//     minNumberofCustomers: 23,
+//     maxNumberofCustomers: 65,
+//     avgNumberOfCookiesSoldPerCustomer: 6.3,
 
 
 
-    // a method is a function attached to an object (i.e. push, random, floor, ceil, log, append, createElement, getElementByID)
-    randomCustPerHr: function () {
-        let custPerHour = [];
-        for (let i = 0; i < hoursOfOperation.length; i++) {
-            let randomAmtOfCustomers = Math.random() * (this.max-this.min) + this.min //this can only be used inside of an object, it ref. the object
-            randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
-            // //console.log ("random amt of cust.0", randomAmtOfCustomers);
-            custPerHour.push (randomAmtOfCustomers)
-        }
-        return custPerHour;
-    },
-   // 3. Calculate and store the simulated amounts of cookies 
-    //         purchased for each hour at each location using average 
-    //         cookies purchased and the random number of customers generated.*/
-    //     cookiesPerHour: [],
-    cookieSales: function() {
-        let cookiesPerHour = [];
-        let customersAtEachHour = this.randomCustPerHr()
-        for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
-            cookiesPerHour.push (cookiesSold)
-        }
-        console.log(cookiesPerHour)
-        return cookiesPerHour
+//     // a method is a function attached to an object (i.e. push, random, floor, ceil, log, append, createElement, getElementByID)
+//     randomCustPerHr: function () {
+//         let custPerHour = [];
+//         for (let i = 0; i < hoursOfOperation.length; i++) {
+//             let randomAmtOfCustomers = Math.random() * (this.maxNumberofCustomers-this.minNumberofCustomers) + this.minNumberofCustomers //this can only be used inside of an object, it ref. the object
+//             randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
+//             // //////console.log ("random amt of cust.0", randomAmtOfCustomers);
+//             custPerHour.push (randomAmtOfCustomers)
+//         }
+//         return custPerHour;
+//     },
+//    // 3. Calculate and store the simulated amounts of cookies 
+//     //         purchased for each hour at each location using average 
+//     //         cookies purchased and the random number of customers generated.*/
+//     //     cookiesPerHour: [],
+//     cookieSales: function() {
+//         let cookiesPerHour = [];
+//         let customersAtEachHour = this.randomCustPerHr()
+//         for (let i = 0; i < customersAtEachHour.length; i++) {
+//             let cookiesSold = customersAtEachHour[i] * this.avgNumberOfCookiesSoldPerCustomer + " cookies"
+//             cookiesPerHour.push (cookiesSold)
+//         }
+//         ////console.log(cookiesPerHour)
+//         return cookiesPerHour
 
-    }
-
-
-    /* 4. Store the results for each location in a separate array… 
-perhaps as a property of the object representing that location. */
-
-}
-
-// 5. Display the values of each array as unordered lists in the browser.
-//to select an element, use getElement...
-
-let displaySeattleHeading = document.getElementById("Seattle");
-let displaySeattle = document.getElementById("outputSeattle");
-// let listItem = document.createElement("li")
-// listItem.innerHTML = "6am:, 7am:, 8am:, 9am:, 10am:, 11am:, 12pm:, 1pm:, 2pm:, 3pm:, 4pm:, 5pm:, 6pm:, 7pm:"
-let seattleCookiesPerHour = seattle.cookieSales();
-displaySeattleHeading.append(headings[0]);
-for (let i =0; i < hoursOfOperation.length; i++){
-    let chickFilA = document.createElement("li");
-    chickFilA.innerHTML = `${hoursOfOperation[i]}: ${seattleCookiesPerHour[i]}`; //.innerHTML is a property
-    displaySeattle.append(chickFilA); //a method in javascript is a function attached to an object that performs a needed task
-}
-
-// console.log(seattle.cookieSales());
+//     }
 
 
-//=====================================================================================================Sales For Tokyo=====================================================================================================
+//     /* 4. Store the results for each location in a separate array… 
+// perhaps as a property of the object representing that location. */
 
-let tokyo = {
-    min: 3,
-    max: 24,
-    avg: 1.2,
+// }
 
+// // 5. Display the values of each array as unordered lists in the browser.
+// //to select an element, use getElement...
 
-    randomCustPerHr: function () {
-        let custPerHour = [];
-        for (let i = 0; i < hoursOfOperation.length; i++) {
-            let randomAmtOfCustomers = Math.random() * (this.max-this.min) + this.min //this can only be used inside of an object, it ref. the object
-            randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
-            //console.log ("random amt of cust.0", randomAmtOfCustomers);
-            custPerHour.push (randomAmtOfCustomers)
-        }
-        return custPerHour;
-    },
+// let displaySeattleHeading = document.getElementById("Seattle");
+// let displaySeattle = document.getElementById("outputSeattle");
+// // let listItem = document.createElement("li")
+// // listItem.innerHTML = "6am:, 7am:, 8am:, 9am:, 10am:, 11am:, 12pm:, 1pm:, 2pm:, 3pm:, 4pm:, 5pm:, 6pm:, 7pm:"
+// let seattleCookiesPerHour = seattle.cookieSales();
+// displaySeattleHeading.append(headings[0]);
+// for (let i =0; i < hoursOfOperation.length; i++){
+//     let chickFilA = document.createElement("li");
+//     chickFilA.innerHTML = `${hoursOfOperation[i]}: ${seattleCookiesPerHour[i]}`; //.innerHTML is a property
+//     displaySeattle.append(chickFilA); //a method in javascript is a function attached to an object that performs a needed task
+// }
 
-    cookieSales: function() {
-        let cookiesPerHour = [];
-        let customersAtEachHour = this.randomCustPerHr()
-        for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
-            cookiesPerHour.push (cookiesSold)
-        }
-        return cookiesPerHour
-    }
-}
-    let displayTokyoHeading = document.getElementById("Tokyo");
-    let displayTokyo = document.getElementById("outputTokyo");
-    let tokyoCookiesPerHour = tokyo.cookieSales()
-    displayTokyoHeading.append(headings[1]);
-    for (let i = 0; i < hoursOfOperation.length; i++){
-        // console.log(hoursOfOperation.length)
-        let thirtyPieceNugget = document.createElement("li")
-        thirtyPieceNugget.innerHTML = `${hoursOfOperation[i]}: ${tokyoCookiesPerHour[i]}`
-        displayTokyo.append(thirtyPieceNugget);
-    }
+// // ////console.log(seattle.cookieSales());
 
 
+// //=====================================================================================================Sales For Tokyo=====================================================================================================
 
-//=====================================================================================================Sales For Dubai=====================================================================================================
-
-let dubai = {
-    min: 11,
-    max: 38,
-    avg: 3.7,
-
-
-    randomCustPerHr: function () {
-        let custPerHour = [];
-        for (let i = 0; i < hoursOfOperation.length; i++) {
-            let randomAmtOfCustomers = Math.random() * (this.max-this.min) + this.min //this can only be used inside of an object, it ref. the object
-            randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
-            // //console.log ("random amt of cust.0", randomAmtOfCustomers);
-            custPerHour.push (randomAmtOfCustomers)
-        }
-        return custPerHour;
-    },
-
-    cookieSales: function() {
-        let cookiesPerHour = [];
-        let customersAtEachHour = this.randomCustPerHr()
-        for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
-            cookiesPerHour.push (cookiesSold)
-        }
-        return cookiesPerHour
-    }
-}
-    let displayDubaiHeading = document.getElementById("Dubai");
-    let displayDubai = document.getElementById("outputDubai");
-    let dubaiCookiesPerHour = dubai.cookieSales();
-    displayDubaiHeading.append(headings[2]);
-    for (let i =0; i < hoursOfOperation.length; i++){
-        let maniaFor = document.createElement("li")
-        maniaFor.innerHTML = `${hoursOfOperation[i]}: ${dubaiCookiesPerHour[i]}`
-        displayDubai.append(maniaFor);
-    }
+// let tokyo = {
+//     minNumberofCustomers: 3,
+//     maxNumberofCustomers: 24,
+//     avgNumberOfCookiesSoldPerCustomer: 1.2,
 
 
-//=====================================================================================================Sales For Paris=====================================================================================================
+//     randomCustPerHr: function () {
+//         let custPerHour = [];
+//         for (let i = 0; i < hoursOfOperation.length; i++) {
+//             let randomAmtOfCustomers = Math.random() * (this.maxNumberofCustomers-this.minNumberofCustomers) + this.minNumberofCustomers //this can only be used inside of an object, it ref. the object
+//             randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
+//             //////console.log ("random amt of cust.0", randomAmtOfCustomers);
+//             custPerHour.push (randomAmtOfCustomers)
+//         }
+//         return custPerHour;
+//     },
 
-let paris = {
-    min: 20,
-    max: 38,
-    avg: 2.3,
-
-
-    randomCustPerHr: function () {
-        let custPerHour = [];
-        for (let i = 0; i < hoursOfOperation.length; i++) {
-            let randomAmtOfCustomers = Math.random() * (this.max-this.min) + this.min //this can only be used inside of an object, it ref. the object
-            randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
-            // //console.log ("random amt of cust.0", randomAmtOfCustomers);
-            custPerHour.push (randomAmtOfCustomers)
-        }
-        return custPerHour;
-    },
-
-    cookieSales: function() {
-        let cookiesPerHour = [];
-        let customersAtEachHour = this.randomCustPerHr()
-        for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
-            cookiesPerHour.push (cookiesSold)
-        }
-        return cookiesPerHour
-    }
-}
-
-let displayParisHeading = document.getElementById("Paris");
-let displayParis = document.getElementById("outputParis")
-let parisCookiesPerHour = paris.cookieSales()
-displayParisHeading.append(headings[3]);
-for (let i =0; i < hoursOfOperation.length; i++){
-    let jerryBoy = document.createElement("li")
-    jerryBoy.innerHTML = `${hoursOfOperation[i]}: ${parisCookiesPerHour[i]}`
-    displayParis.append(jerryBoy);
-}
+//     cookieSales: function() {
+//         let cookiesPerHour = [];
+//         let customersAtEachHour = this.randomCustPerHr()
+//         for (let i = 0; i < customersAtEachHour.length; i++) {
+//             let cookiesSold = customersAtEachHour[i] * this.avgNumberOfCookiesSoldPerCustomer + " cookies"
+//             cookiesPerHour.push (cookiesSold)
+//         }
+//         return cookiesPerHour
+//     }
+// }
+//     let displayTokyoHeading = document.getElementById("Tokyo");
+//     let displayTokyo = document.getElementById("outputTokyo");
+//     let tokyoCookiesPerHour = tokyo.cookieSales()
+//     displayTokyoHeading.append(headings[1]);
+//     for (let i = 0; i < hoursOfOperation.length; i++){
+//         // ////console.log(hoursOfOperation.length)
+//         let thirtyPieceNugget = document.createElement("li")
+//         thirtyPieceNugget.innerHTML = `${hoursOfOperation[i]}: ${tokyoCookiesPerHour[i]}`
+//         displayTokyo.append(thirtyPieceNugget);
+//     }
 
 
 
-//=====================================================================================================Sales For Lima=====================================================================================================
+// //=====================================================================================================Sales For Dubai=====================================================================================================
 
-let lima = {
-    min: 2,
-    max: 16,
-    avg: 4.6,
+// let dubai = {
+//     minNumberofCustomers: 11,
+//     maxNumberofCustomers: 38,
+//     avgNumberOfCookiesSoldPerCustomer: 3.7,
+
+
+//     randomCustPerHr: function () {
+//         let custPerHour = [];
+//         for (let i = 0; i < hoursOfOperation.length; i++) {
+//             let randomAmtOfCustomers = Math.random() * (this.maxNumberofCustomers-this.minNumberofCustomers) + this.minNumberofCustomers //this can only be used inside of an object, it ref. the object
+//             randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
+//             // //////console.log ("random amt of cust.0", randomAmtOfCustomers);
+//             custPerHour.push (randomAmtOfCustomers)
+//         }
+//         return custPerHour;
+//     },
+
+//     cookieSales: function() {
+//         let cookiesPerHour = [];
+//         let customersAtEachHour = this.randomCustPerHr()
+//         for (let i = 0; i < customersAtEachHour.length; i++) {
+//             let cookiesSold = customersAtEachHour[i] * this.avgNumberOfCookiesSoldPerCustomer + " cookies"
+//             cookiesPerHour.push (cookiesSold)
+//         }
+//         return cookiesPerHour
+//     }
+// }
+//     let displayDubaiHeading = document.getElementById("Dubai");
+//     let displayDubai = document.getElementById("outputDubai");
+//     let dubaiCookiesPerHour = dubai.cookieSales();
+//     displayDubaiHeading.append(headings[2]);
+//     for (let i =0; i < hoursOfOperation.length; i++){
+//         let maniaFor = document.createElement("li")
+//         maniaFor.innerHTML = `${hoursOfOperation[i]}: ${dubaiCookiesPerHour[i]}`
+//         displayDubai.append(maniaFor);
+//     }
+
+
+// //=====================================================================================================Sales For Paris=====================================================================================================
+
+// let paris = {
+//     minNumberofCustomers: 20,
+//     maxNumberofCustomers: 38,
+//     avgNumberOfCookiesSoldPerCustomer: 2.3,
+
+
+//     randomCustPerHr: function () {
+//         let custPerHour = [];
+//         for (let i = 0; i < hoursOfOperation.length; i++) {
+//             let randomAmtOfCustomers = Math.random() * (this.maxNumberofCustomers-this.minNumberofCustomers) + this.minNumberofCustomers //this can only be used inside of an object, it ref. the object
+//             randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
+//             // //////console.log ("random amt of cust.0", randomAmtOfCustomers);
+//             custPerHour.push (randomAmtOfCustomers)
+//         }
+//         return custPerHour;
+//     },
+
+//     cookieSales: function() {
+//         let cookiesPerHour = [];
+//         let customersAtEachHour = this.randomCustPerHr()
+//         for (let i = 0; i < customersAtEachHour.length; i++) {
+//             let cookiesSold = customersAtEachHour[i] * this.avgNumberOfCookiesSoldPerCustomer + " cookies"
+//             cookiesPerHour.push (cookiesSold)
+//         }
+//         return cookiesPerHour
+//     }
+// }
+
+// let displayParisHeading = document.getElementById("Paris");
+// let displayParis = document.getElementById("outputParis")
+// let parisCookiesPerHour = paris.cookieSales()
+// displayParisHeading.append(headings[3]);
+// for (let i =0; i < hoursOfOperation.length; i++){
+//     let jerryBoy = document.createElement("li")
+//     jerryBoy.innerHTML = `${hoursOfOperation[i]}: ${parisCookiesPerHour[i]}`
+//     displayParis.append(jerryBoy);
+// }
 
 
 
-    randomCustPerHr: function () {
-        let custPerHour = [];
-        for (let i = 0; i < hoursOfOperation.length; i++) {
-            let randomAmtOfCustomers = Math.random() * (this.max-this.min) + this.min //this can only be used inside of an object, it ref. the object
-            randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
-            // //console.log ("random amt of cust.0", randomAmtOfCustomers);
-            custPerHour.push (randomAmtOfCustomers)
-        }
-        return custPerHour;
-    },
+// //=====================================================================================================Sales For Lima=====================================================================================================
 
-    cookieSales: function() {
-        let cookiesPerHour = [];
-        let customersAtEachHour = this.randomCustPerHr()
-        for (let i = 0; i < customersAtEachHour.length; i++) {
-            let cookiesSold = customersAtEachHour[i] * this.avg + " cookies"
-            cookiesPerHour.push (cookiesSold)
-        }
-        return cookiesPerHour
-    }
-}
+// let lima = {
+//     minNumberofCustomers: 2,
+//     maxNumberofCustomers: 16,
+//     avgNumberOfCookiesSoldPerCustomer: 4.6,
 
-let displayLimaHeading = document.getElementById("Lima");
-let displayLima = document.getElementById("outputLima")
-let limaCookiesPerHour = lima.cookieSales()
-displayLimaHeading.append(headings[4]);
-for (let i =0; i < hoursOfOperation.length; i++){
-    let herNameIsShelly = document.createElement("li")
-    herNameIsShelly.innerHTML = `${hoursOfOperation[i]}: ${limaCookiesPerHour[i]}`
-    displayLima.append(herNameIsShelly);
-}
+
+
+//     randomCustPerHr: function () {
+//         let custPerHour = [];
+//         for (let i = 0; i < hoursOfOperation.length; i++) {
+//             let randomAmtOfCustomers = Math.random() * (this.maxNumberofCustomers-this.minNumberofCustomers) + this.minNumberofCustomers //this can only be used inside of an object, it ref. the object
+//             randomAmtOfCustomers = Math.floor(randomAmtOfCustomers);
+//             // //////console.log ("random amt of cust.0", randomAmtOfCustomers);
+//             custPerHour.push (randomAmtOfCustomers)
+//         }
+//         return custPerHour;
+//     },
+
+//     cookieSales: function() {
+//         let cookiesPerHour = [];
+//         let customersAtEachHour = this.randomCustPerHr()
+//         for (let i = 0; i < customersAtEachHour.length; i++) {
+//             let cookiesSold = customersAtEachHour[i] * this.avgNumberOfCookiesSoldPerCustomer + " cookies"
+//             cookiesPerHour.push (cookiesSold)
+//         }
+//         return cookiesPerHour
+//     }
+// }
+
+// let displayLimaHeading = document.getElementById("Lima");
+// let displayLima = document.getElementById("outputLima")
+// let limaCookiesPerHour = lima.cookieSales()
+// displayLimaHeading.append(headings[4]);
+// for (let i =0; i < hoursOfOperation.length; i++){
+//     let herNameIsShelly = document.createElement("li")
+//     herNameIsShelly.innerHTML = `${hoursOfOperation[i]}: ${limaCookiesPerHour[i]}`
+//     displayLima.append(herNameIsShelly);
+// }
 
 
 
@@ -259,7 +259,6 @@ Seattle	    23	        65	        6.3
 //         Location	Min/Cust	Max/Cust	AvgCookie/Sale
 //         Tokyo	    3	        24	        1.2
 //         */
-// const Tokyo = {
 
 //         //======================================================================Starting Data=========================================================
 //         /*
@@ -305,73 +304,170 @@ Calculating the sum of these hourly totals; your output for each location should
 
 //==================================================================Creating a Prototype==================================================================
 
+//data types: numbers, strings, booleans (value that is either true/false), objects (stored data in properties; a person is an object. one who has eyes, that's a property. i can talk, that is a function), undefined, null
 
-// function cookieStandLocation(min, max, avg, location, hours) {
-//     // let tblDemo = document.createElement('table');
-//     let stand = {};
-//     stand.min = min;
-//     stand.max = max;
-//     stand.avg = avg;
-//     stand.location = location;
-//     stand.cookiesPerHour = [];
-//     stand.hoursOfOperation = hours;
-//     stand.getCustomers = function () {
-//         //console.log(`Stand Max: ${stand.max} || this Max : ${this.max}`);
-//         return getRandom(this.max, this.min);
-//     }
+// let cookiesPerHour = [];
+let sum = 0; 
+let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+function cookieStandLocation(minNumberofCustomers, maxNumberofCustomers, avgNumberOfCookiesSoldPerCustomer, location, hours) {
+    // let tblDemo = document.createElement('table');
+    let stand = {};
+    stand.minNumberofCustomers = minNumberofCustomers;
+    stand.maxNumberofCustomers = maxNumberofCustomers;
+    stand.avgNumberOfCookiesSoldPerCustomer = avgNumberOfCookiesSoldPerCustomer;
+    stand.location = location;
+    stand.cookiesPerHour = [];
+    stand.hoursOfOperation = hours;
+    stand.getCustomers = function () {
+        ////console.log(`Stand Max: ${stand.maxNumberofCustomers} || this Max : ${this.maxNumberofCustomers}`);
+        return getRandom(this.maxNumberofCustomers, this.minNumberofCustomers);
+    }
 
-//     stand.getCookies = function getCookies() {
-//         for (let i = 0; i < this.hoursOfOperation.length; i++) {
-//             //console.log('seattle avg cookies/sale', this.avg);
-//             // //console.log('seattle avg customers/hour', this.customersPerHour());
-//             this.cookiesPerHour.push(Math.ceil(this.avg * this.getCustomers()));
-//             return getCookies();
+    stand.getCookies = function () {
+        for (let i = 0; i < this.hoursOfOperation.length; i++) {
+            // ////console.log('seattle avgNumberOfCookiesSoldPerCustomer cookies/sale', this.avgNumberOfCookiesSoldPerCustomer);
+            // ////console.log('seattle avgNumberOfCookiesSoldPerCustomer customers/hour', this.customersPerHour());
+            this.cookiesPerHour.push(Math.ceil(this.avgNumberOfCookiesSoldPerCustomer * this.getCustomers()));
+            
+        };
+        console.log(this.cookiesPerHour.length)
+        return stand.cookiesPerHour;
 
-//         };
-//         return this.cookiesPerHour;
+    }
+    // //console.log("This is ", cookiesPerHour.reduce());
+// //console.log(`stand.getCookies() is the value for my whole number of cookiesPerHour:${stand.getCookies()}`);
+    // let cookieDemo = Seattle.getCookies(this.cookiesPerHour);
+    // let hoursArray = document.querySelector('.output')
+    // //console.log(stand.getCookies().reduce);
 
+    stand.render = function(locationsArray) {
+        let row = document.createElement('tr'); //create new row
+        let localeTD = document.createElement('td');
+        let thDemo = document.createElement('th');
+        localeTD.innerHTML = this.location;
+        row.append(localeTD);
+        document.getElementById('cookietb').append(thDemo);
+        // console.log(this.cookiesPerHour)
+        //loop through cookies per hour and pass into the table
+        for (let i = 0; i < this.cookiesPerHour.length; i++) {
+            let td = document.createElement("td")
+            td.innerHTML = this.cookiesPerHour[i]
+            row.append(td)
+        } //use "this" when referring to stand inside of the method and stand when not inside of a stand method 
+            for (let i = 0; i < this.cookiesPerHour.length; i++) {
+                sum += this.cookiesPerHour[i];
+                //here I can insert a line of code to calculate the total of the totals
+            }
+            
+            
+            let td2 = document.createElement("td")
+                td2.innerHTML = sum 
+                row.append(td2)
+        
+
+        table.append(row)
+
+    }
+
+    //////console.log(stand.render())
+    return stand;
+
+}
+let table = document.getElementById('cookietb')
+let tr = document.createElement('tr')
+// let th = document.createElement('th')
+// th.innerHTML = "6am"
+// let th2 = document.createElement('th')
+// th2.innerHTML = "7am"
+let emptyTH = document.createElement('th')
+tr.append(emptyTH)
+for (let i = 0; i < hoursOfOperation.length; i++) {
+    let th = document.createElement("th")
+    th.innerHTML = hoursOfOperation[i]
+    tr.append(th)
+
+}
+// tr.append(th)
+// tr.append(th2)
+
+
+table.append(tr)
+
+
+//=========================================================================================Creating the Totals Row in the Table=========================================================================================
+// const locationsArray = [seattle, tokyo, dubai, paris, lima];    
+// for (let i = 0; i < this.locations.length; i++) {
+//     let sum = 0;
+//     let locations = document.createElement ('locations')
+//     tr.append(locations)
+// }
+
+
+
+
+
+
+// creating objects each with unique data
+
+const seattle = cookieStandLocation(23, 65, 6.3, 'Seattle', hoursOfOperation);
+seattle.getCustomers(); //use a dot to access properties of an object
+seattle.getCookies(); //parentheses after a function calls/invokes the function
+seattle.render();
+
+//example
+// const animal = function(name, color, age){
+//     this.name = name;
+//     this.color = color;
+//     this.age = age;
+
+//     let speak = function(name){
+//         ////console.log("Hi! I'm a " + name + "!");
 //     }
 // }
-// // let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-// let cookieDemo = Seattle.getCookies(this.cookiesPerHour);
-// let hoursArray = document.querySelector('.output')
 
-// stand.render = function () {
-//     let row = document.createElement('tr');
-//     let localeTD = document.createElement('td');
-//     let thDemo = document.createElement('th');
-//     localeTD.innerHTML = this.location;
-//     row.append(localeTD);
-//     document.getElementById('jsTbl').append(row);
+// const doggy = animal("Doggy", "purple", 3);
+// doggy.speak()
 
-//     for (let i = 0; i < this.hoursOfOperation.length; i++) {
-//         let thDemo = document.createElement('th');
-//         tdDemo.innerHTML = this.cookiesPerHour[i];
-//         document.getElementById("cookietb").append(thDemo);
-//     }
+const tokyo = cookieStandLocation(3, 24, 1.2, 'Tokyo', hoursOfOperation);
+tokyo.getCustomers();
+tokyo.getCookies();
+tokyo.render();
 
-//     for (let i = 0; i < this.hoursOfoperation.length; i++) {
-//         let tdDemo = document.createElement('td')
-//         tdDemo.innerHTML = this.cookiesPerHour[i];
-//         Row.append(tdDemo);
+const dubai = cookieStandLocation(11, 38, 3.7, 'Dubai', hoursOfOperation);
+dubai.getCustomers();
+dubai.getCookies();
+dubai.render();
 
-//     }
+const paris = cookieStandLocation(20, 38, 2.3, 'Paris', hoursOfOperation);
+paris.getCustomers();
+paris.getCookies();
+paris.render();
 
-//     return stand;
-// }
+const lima = cookieStandLocation(2, 16, 4.6, 'Lima', hoursOfOperation);
+lima.getCustomers();
+lima.getCookies();
+lima.render();
 
 
-//creating objects each with unique data
+const locationsArray = [seattle, tokyo, dubai, paris, lima]; 
+let emptyTD = document.createElement("td")
+let footer = document.createElement("tfoot")
+let totalsRow = document.createElement("tr")
+totalsRow.append(emptyTD)
+for (let i = 0; i < hoursOfOperation.length; i++) {
+let hourlyTotals = 0;
+for (let x = 0; x < locationsArray.length; x++) {
+    hourlyTotals += locationsArray[x].cookiesPerHour[i];
+}
+let tdFoot = document.createElement("td")
+tdFoot.innerHTML = hourlyTotals
+totalsRow.append(tdFoot)
+}
+footer.append(totalsRow)
+table.append(footer)
 
-// const seattle = cookieStandLocation(23, 65, 6.3, 'Seattle', hoursOfOperation);
-// seattle.getCustomers();
-// seattle.getCookies();
-// seattle.render();
 
-// const tokyo = cookieStandLocation(3, 24, 1.2, 'Tokyo', hoursOfOperation);
-// tokyo.getCustomers();
-// tokyo.getCookies();
-// tokyo.render();
+
 
 /*
 Seattle
