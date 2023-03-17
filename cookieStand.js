@@ -451,6 +451,7 @@ lima.render();
 
 const locationsArray = [seattle, tokyo, dubai, paris, lima]; 
 let emptyTD = document.createElement("td")
+// let totalsTD = document.createElement("td")
 let footer = document.createElement("tfoot")
 let totalsRow = document.createElement("tr")
 totalsRow.append(emptyTD)
@@ -459,6 +460,7 @@ let hourlyTotals = 0;
 for (let x = 0; x < locationsArray.length; x++) {
     hourlyTotals += locationsArray[x].cookiesPerHour[i];
 }
+// totalsTD.append(emptyTD)
 let tdFoot = document.createElement("td")
 tdFoot.innerHTML = hourlyTotals
 totalsRow.append(tdFoot)
@@ -467,6 +469,11 @@ footer.append(totalsRow)
 table.append(footer)
 
 
+// Upon submission of the HTML form, create an event handler that creates a new instance of a cookie stand that appends to the table upon form submission.
+
+// Use the constructor function as your guide to determine what input fields your form needs (hint: also consider what is passed in when creating instances!).
+
+//If not complete from lab 7, write a stand-alone function to generate a footer row which will display the total number of cookies sold per hour for all locations. When a new store is added using your form, the totals in the footer row should update to include these new sales numbers.
 
 
 /*

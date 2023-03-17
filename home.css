@@ -13,9 +13,12 @@ font-family: 'Ubuntu', sans-serif;
 
 
 
-* {
-    background-color: rgb(75, 207, 207);
-
+body {
+    /* background-color: rgb(75, 207, 207); */
+    background-image: linear-gradient(rgb(250, 250, 235), rgb(75, 207, 207));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a {
@@ -23,3 +26,50 @@ a {
     font-family: 'Tilt Warp', cursive;
     color: #0e7c7b;
 }
+
+ul {
+    color: rgb(1, 149, 149);
+    list-style-type: none;
+}
+
+#seattleListHeading {
+    /* display: flex; */
+    padding: 30px;
+    font-size: 30px;
+}
+
+#tokyoListHeading{
+    padding: 30px;
+    font-size: 30px;
+
+}
+
+#dubaiListHeading {
+    padding: 30px;
+    font-size: 30px;
+}
+
+#parisListHeading {
+    padding: 30px;
+    font-size: 30px;
+}
+
+#limaListHeading {
+    padding: 30px;
+    font-size: 30px;
+}
+
+.list{
+    /* display: flex; */
+}
+
+#listHours{
+    background-image: url("./images/salmon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
