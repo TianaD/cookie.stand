@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cookie Stand</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lato:ital,wght@0,100;0,300;0,400;1,300&family=Nunito:wght@300;400&family=Playfair+Display:wght@400;500&family=Roboto+Mono:wght@100;300&family=Tilt+Prism&family=Tilt+Warp&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
@@ -14,9 +14,25 @@
 <body>
 
     <style>
+
+
         table, td, th {
-            border: 3px solid black;
+            border: 1.5px solid black;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 70px;
+            text-align: center;
+            padding: 10px;
+            font-size: large;
+
         }
+
+        /* tr:hover {
+            background-color: rgb(77, 43, 0);
+            } */
+
+
     </style>
     
     <a href="./index.html">Home</a>
@@ -44,7 +60,7 @@
     <table id ="cookietb">
 
         <tfoot id ="totals">
-
+            
         </tfoot>
     </table>
 
@@ -72,6 +88,55 @@
     </table> -->
 
 
+
+
+
+<!-----------------------------------------------------------Create a new HTML form to accept the information for a new cookie stand. Be sure to utulize the <fieldset> tag to help you style it.----------------------------------------------------------->
+
+    <br>
+    <form action="#">
+            <label for="cityName">City Name</label>
+            <input type="text" placeholder = "Insert  New  City  Name"> <br>
+            <button onclick="#">Add City</button>
+    </form>
+
+
+
+
+    <form action="#">
+    <!-- <form action="#" method = "get"> -->
+
+        <div id = "labelInput">
+
+            <br>
+            <label for="minCustomers">Min Number of Customers Per Hour</label>
+            <input type="text" placeholder = "Insert  Minimum  Number  of  Customers  Per  Hour"> <br>
+
+            <label for="maxCustomers">Max Number of Customers Per Hour</label>
+            <input type="text" placeholder = "Insert  Maximum  Number  of  Customers  Per  Hour"> <br>
+
+            <label for="avgCookieSales">Average Number of Cookies Sold Per Customer</label>
+            <input type="text" placeholder = "Insert  Average  Number  of  Cookies  Sold  Per  Customer"> <br>
+
+            <button onclick="#">Add Data to Table</button>
+
+            <!-- <label for="cityName"></label>
+            <input type="text" id = "" name = "" value = "">
+
+            <label for="minCustomers"></label>
+            <input type="text" id = "" name = "" value = "">
+
+            <label for="maxCustomers"></label>
+            <input type="text" id = "" name = "" value = "">
+
+            <label for="avgCookieSales"></label>
+            <input type="text" id = "" name = "" value = ""> -->
+
+    </div>
+
+    </form>
+
     <script src="./cookieStand.js"></script>
+
 </body>
 </html>
