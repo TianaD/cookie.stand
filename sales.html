@@ -28,6 +28,10 @@
 
         }
 
+        table, td, th:hover {
+            background-color: brown;
+        }
+
         /* tr:hover {
             background-color: rgb(77, 43, 0);
             } */
@@ -59,9 +63,7 @@
 
     <table id ="cookietb">
 
-        <tfoot id ="totals">
-            
-        </tfoot>
+
     </table>
 
 
@@ -93,44 +95,28 @@
 
 <!-----------------------------------------------------------Create a new HTML form to accept the information for a new cookie stand. Be sure to utulize the <fieldset> tag to help you style it.----------------------------------------------------------->
 
-    <br>
-    <form action="#">
-            <label for="cityName">City Name</label>
-            <input type="text" placeholder = "Insert  New  City  Name"> <br>
-            <button onclick="#">Add City</button>
-    </form>
 
 
-
-
-    <form action="#">
+    <form id = "button">
     <!-- <form action="#" method = "get"> -->
 
         <div id = "labelInput">
 
             <br>
-            <label for="minCustomers">Min Number of Customers Per Hour</label>
-            <input type="text" placeholder = "Insert  Minimum  Number  of  Customers  Per  Hour"> <br>
+            <label for = "cityName">City Name</label>
+            <input id = "name" type ="text" placeholder = "Insert  New  City  Name"> <br>
+            
+            <label for ="minCustomers">Min Number of Customers Per Hour</label>
+            <input id = "min" type ="number" min = 1 placeholder = "Insert  Minimum  Number  of  Customers  Per  Hour" value = "minInput"> <br>
 
-            <label for="maxCustomers">Max Number of Customers Per Hour</label>
-            <input type="text" placeholder = "Insert  Maximum  Number  of  Customers  Per  Hour"> <br>
+            <label for = "maxCustomers">Max Number of Customers Per Hour</label>
+            <input id = "max" type ="number" min = 1 placeholder = "Insert  Maximum  Number  of  Customers  Per  Hour" value = "maxInput"> <br>
 
-            <label for="avgCookieSales">Average Number of Cookies Sold Per Customer</label>
-            <input type="text" placeholder = "Insert  Average  Number  of  Cookies  Sold  Per  Customer"> <br>
+            <label for = "avgCookieSales">Average Number of Cookies Sold Per Customer</label>
+            <input id = "avg" type ="number" min = 1 placeholder = "Insert  Average  Number  of  Cookies  Sold  Per  Customer" value = "avgInput"> <br>
 
-            <button onclick="#">Add Data to Table</button>
+            <button type = "submit">Add Data to Table</button>
 
-            <!-- <label for="cityName"></label>
-            <input type="text" id = "" name = "" value = "">
-
-            <label for="minCustomers"></label>
-            <input type="text" id = "" name = "" value = "">
-
-            <label for="maxCustomers"></label>
-            <input type="text" id = "" name = "" value = "">
-
-            <label for="avgCookieSales"></label>
-            <input type="text" id = "" name = "" value = ""> -->
 
     </div>
 
