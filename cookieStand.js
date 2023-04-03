@@ -320,17 +320,17 @@ function cookieStandLocation(minNumberofCustomers, maxNumberofCustomers, avgNumb
     stand.hoursOfOperation = hours;
     stand.getCustomers = function () {
         ////console.log(`Stand Max: ${stand.maxNumberofCustomers} || this Max : ${this.maxNumberofCustomers}`);
-        return getRandom(this.maxNumberofCustomers, this.minNumberofCustomers);
+        return getRandom(stand.maxNumberofCustomers, stand.minNumberofCustomers);
     }
 
     stand.getCookies = function () {
-        for (let i = 0; i < this.hoursOfOperation.length; i++) {
+        for (let i = 0; i < hoursOfOperation.length; i++) {
             // ////console.log('seattle avgNumberOfCookiesSoldPerCustomer cookies/sale', this.avgNumberOfCookiesSoldPerCustomer);
             // ////console.log('seattle avgNumberOfCookiesSoldPerCustomer customers/hour', this.customersPerHour());
-            this.cookiesPerHour.push(Math.ceil(this.avgNumberOfCookiesSoldPerCustomer * this.getCustomers()));
+            stand.cookiesPerHour.push(Math.ceil(stand.avgNumberOfCookiesSoldPerCustomer * stand.getCustomers()));
             
         };
-        console.log(this.cookiesPerHour.length)
+        // console.log(this.cookiesPerHour.length)
         return stand.cookiesPerHour;
 
     }
@@ -344,20 +344,20 @@ function cookieStandLocation(minNumberofCustomers, maxNumberofCustomers, avgNumb
         let row = document.createElement('tr'); //create new row
         let localeTD = document.createElement('td');
         let thDemo = document.createElement('th');
-        localeTD.innerHTML = this.location;
+        localeTD.innerHTML = stand.location;
         row.append(localeTD);
         document.getElementById('cookietb').append(thDemo);
         // console.log(this.cookiesPerHour)
         //loop through cookies per hour and pass into the table
-        for (let i = 0; i < this.cookiesPerHour.length; i++) {
+        for (let i = 0; i < stand.cookiesPerHour.length; i++) {
             let td = document.createElement("td")
-            td.innerHTML = this.cookiesPerHour[i]
+            td.innerHTML = stand.cookiesPerHour[i]
             row.append(td)
         } //use "this" when referring to stand inside of the method and stand when not inside of a stand method 
-            for (let i = 0; i < this.cookiesPerHour.length; i++) {
-                sum += this.cookiesPerHour[i];
-                //here I can insert a line of code to calculate the total of the totals
-            }
+        for (let i = 0; i < stand.cookiesPerHour.length; i++) {
+            sum += stand.cookiesPerHour[i];
+            //here I can insert a line of code to calculate the total of the totals
+        }
             
             
             let td2 = document.createElement("td")
@@ -373,6 +373,7 @@ function cookieStandLocation(minNumberofCustomers, maxNumberofCustomers, avgNumb
     return stand;
 
 }
+
 let table = document.getElementById('cookietb')
 let tr = document.createElement('tr')
 // let th = document.createElement('th')
@@ -387,6 +388,7 @@ for (let i = 0; i < hoursOfOperation.length; i++) {
     tr.append(th)
 
 }
+
 // tr.append(th)
 // tr.append(th2)
 
@@ -395,15 +397,6 @@ table.append(tr)
 
 
 //=========================================================================================Creating the Totals Row in the Table=========================================================================================
-// const locationsArray = [seattle, tokyo, dubai, paris, lima];    
-// for (let i = 0; i < this.locations.length; i++) {
-//     let sum = 0;
-//     let locations = document.createElement ('locations')
-//     tr.append(locations)
-// }
-
-
-
 
 
 
@@ -449,25 +442,29 @@ lima.getCookies();
 lima.render();
 
 
-const locationsArray = [seattle, tokyo, dubai, paris, lima]; 
-let emptyTD = document.createElement("td")
-// let totalsTD = document.createElement("td")
-let footer = document.createElement("tfoot")
-let totalsRow = document.createElement("tr")
-totalsRow.append(emptyTD)
-for (let i = 0; i < hoursOfOperation.length; i++) {
-let hourlyTotals = 0;
-for (let x = 0; x < locationsArray.length; x++) {
-    hourlyTotals += locationsArray[x].cookiesPerHour[i];
+let locationsArray = [seattle, tokyo, dubai, paris, lima]; 
+let dailyTotalsRowForEachHourOfEachStore = function(){
+    let emptyTD = document.createElement("td")
+    // let totalsTD = document.createElement("td")
+    let footer = document.createElement("tfoot")
+    let totalsRow = document.createElement("tr")
+    totalsRow.append(emptyTD)
+    for (let i = 0; i < hoursOfOperation.length; i++) {
+    let hourlyTotals = 0;
+    for (let x = 0; x < locationsArray.length; x++) {
+        hourlyTotals += locationsArray[x].cookiesPerHour[i];
+    }
+    // totalsTD.append(emptyTD)
+    let tdFoot = document.createElement("td")
+    tdFoot.innerHTML = hourlyTotals
+    totalsRow.append(tdFoot)
+    }
+    footer.append(totalsRow)
+    table.append(footer)
 }
-// totalsTD.append(emptyTD)
-let tdFoot = document.createElement("td")
-tdFoot.innerHTML = hourlyTotals
-totalsRow.append(tdFoot)
-}
-footer.append(totalsRow)
-table.append(footer)
-
+dailyTotalsRowForEachHourOfEachStore()
+// LAB09
+// Create a new HTML form to accept the information for a new cookie stand. Be sure to utilize the <fieldset> tag to help you style it.
 
 // Upon submission of the HTML form, create an event handler that creates a new instance of a cookie stand that appends to the table upon form submission.
 
@@ -476,39 +473,44 @@ table.append(footer)
 //If not complete from lab 7, write a stand-alone function to generate a footer row which will display the total number of cookies sold per hour for all locations. When a new store is added using your form, the totals in the footer row should update to include these new sales numbers.
 
 
-/*
-Seattle
-6am: 16 cookies
-7am: 20 cookies
-8am: 35 cookies
-9am: 48 cookies
-10am: 56 cookies
-11am: 77 cookies
-12pm: 93 cookies
-1pm: 144 cookies
-2pm: 119 cookies
-3pm: 84 cookies
-4pm: 61 cookies
-5pm: 23 cookies
-6pm: 42 cookies
-7pm: 57 cookies
-Total: 875 cookies
-*/
+// LAB09
+// select using getElementById. the element has a value on it. 
+// when submit is clicked, i want to pull in values in input tags
+
+// create onclick function
+// set them equal to variables . on the variables there will be a property called value. the value is what is input into the field. 
+// take that value and pass it into constructor function to build a new location object
+// call dif. methods
 
 
+// let   = document.getElementById("min")
+// let   = document.getElementById("max")
+// let   = document.getElementById("avg")
 
-    // 7am: 20 cookies
-    // 8am: 35 cookies
-    // 9am: 48 cookies
-    // 10am: 56 cookies
-    // 11am: 77 cookies
-    // 12pm: 93 cookies
-    // 1pm: 144 cookies
-    // 2pm: 119 cookies
-    // 3pm: 84 cookies
-    // 4pm: 61 cookies
-    // 5pm: 23 cookies
-    // 6pm: 42 cookies
-    // 7pm: 57 cookies
-    // Total: 875 cookies
+// let form = getElementById('labelInput')
+// tr.append('labelInput')
 
+function addLocation(event){
+    event.preventDefault();
+    let inputName = document.getElementById("name")
+    let inputMin = document.getElementById("min")
+    let inputMax = document.getElementById("max")
+    let inputAvg = document.getElementById("avg")
+
+    const newStore = cookieStandLocation(inputMin.value, inputMax.value, inputAvg.value, inputName.value, hoursOfOperation)
+    newStore.getCustomers();
+    newStore.getCookies();
+    newStore.render();
+    locationsArray.push(newStore);
+    let currentFooter = document.querySelector("tfoot");
+    currentFooter.remove();
+    dailyTotalsRowForEachHourOfEachStore();
+    
+    // inputName.append('tr')
+    // inputMin.append('td')
+    // inputMax.append('td')
+    // inputAvg.append('td')
+   }
+   document.getElementById("button").addEventListener("submit", addLocation)
+   
+// my function should take the userInput, and make it a constructor so that the information is passed into the existing function
